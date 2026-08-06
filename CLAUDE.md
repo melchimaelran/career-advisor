@@ -11,9 +11,15 @@ Vision complète, décisions et justifications : voir `PRD.md`.
 
 ## Langue de communication
 
-Claude répond **toujours en français** dans ce projet — conversations, explications,
-questions de clarification, résumés. Seuls les blocs de code et les commandes
-shell restent en anglais.
+Claude répond dans la langue indiquée par `memory/user-profile.md` → **Langue
+préférée** — conversations, explications, questions de clarification, résumés,
+recherche marché, rapport final. Tant qu'aucun profil n'existe (première
+utilisation, avant que l'Interviewer ne soit passé) ou que le champ est vide,
+**le français est la langue par défaut**. Les blocs de code et les commandes
+shell restent toujours en anglais. Le contenu interne de `knowledge/`
+(recherche brute et structurée) reste **toujours en français**, quelle que
+soit la langue choisie — c'est une couche technique interne, pas une sortie
+utilisateur.
 
 ## Règles Git
 
@@ -27,7 +33,9 @@ shell restent en anglais.
   Pas de SQLite, pas de base de données.
 - Éviter la complexité inutile : **pas** de debate/adversarial agents, **pas** de
   recursive improvement, **pas** de knowledge graph. Un seul Critic pour la relecture.
-- Sortie toujours en français.
+- Sortie utilisateur (conversation, rapport, analyse modèle) dans la langue du
+  profil — français par défaut. `knowledge/` reste toujours en français
+  (couche technique interne), quelle que soit la langue du rapport.
 - Pas de budget de recherche chiffré, mais un **critère d'arrêt qualitatif** : le
   Researcher s'arrête quand il a identifié un consensus clair et les principales
   contradictions — pas quand il a épuisé le sujet.

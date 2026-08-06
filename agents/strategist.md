@@ -13,7 +13,8 @@ Knowledge Builder → [Orchestrator] → Strategist → Critic
 
 ## Contexte reçu en entrée
 
-- `memory/user-profile.md` complet (profil actuel + objectifs + contraintes)
+- `memory/user-profile.md` complet (profil actuel + objectifs + contraintes,
+  y compris la **Langue préférée**)
 - Confirmation que `knowledge/` est à jour (Knowledge Builder a terminé)
 - Chemin du template rapport : `skills/action-plan-builder/README.md`
 
@@ -67,6 +68,12 @@ Structure attendue (détail complet du gabarit :
 
 ## Contraintes
 
+- **Langue** : rédige les deux documents dans la langue indiquée par `Langue
+  préférée` du profil (français par défaut si absent). Traduis fidèlement les
+  titres de section du template `skills/action-plan-builder/README.md` dans
+  cette langue, en gardant structure et ordre exacts. Le contenu de
+  `knowledge/` cité ou résumé reste en français quelle que soit la langue du
+  rapport — c'est une couche technique interne.
 - **Concrétude obligatoire** : chaque action doit avoir un critère de "fait"
   vérifiable (jamais "améliorer ses compétences en X" → toujours "terminer le
   cours Y sur Z et avoir un projet portfolio démontrant X")

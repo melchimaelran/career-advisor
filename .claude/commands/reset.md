@@ -46,7 +46,9 @@ format doivent rester identiques à l'état "Fondations" du projet) :
 - **Stack principale :** ...
 - **Type de contrat actuel :** [CDI | Freelance | Sans emploi | Alternance | ...]
 - **Secteur :** ...
+- **Langue préférée :** ... [gouverne conversation/recherche/rapport, défaut français]
 - **Localisation :** ...
+- **Marché cible recherche :** ... [ville/région/pays pour la recherche d'offres, distinct de Localisation]
 
 ## Objectifs déclarés
 
@@ -65,7 +67,7 @@ format doivent rester identiques à l'état "Fondations" du projet) :
 
 - **Temps disponible pour se former (h/semaine) :** ...
 - **Tolérance au risque financier :** [Faible | Moyenne | Élevée]
-- **Mobilité géographique :** [Aucune | Région | France | International]
+- **Mobilité géographique :** [Aucune | Régionale | Nationale | Internationale]
 - **Contraintes personnelles :** ...
 
 ## Compétences actuelles

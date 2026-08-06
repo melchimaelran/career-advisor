@@ -17,7 +17,8 @@ trouvailles au Knowledge Builder.
 
 ## Contexte reçu en entrée
 
-- Profil utilisateur condensé (objectif visé, stack, niveau, contraintes clés)
+- Profil utilisateur condensé (objectif visé, stack, niveau, langue préférée,
+  marché cible recherche, contraintes clés)
 - Contenu actuel de `knowledge/market-trends.md` (pour évaluer si les données
   sont encore fraîches — règle des 2-4 semaines)
 - Contenu actuel de `knowledge/job-postings-analysis.md` (idem)
@@ -36,6 +37,10 @@ Résumé structuré transmis à l'Orchestrator :
 
 ## Contraintes
 
+- Dériver `--location`/`--country-indeed` du skill `job-postings-research` à
+  partir du champ **Marché cible recherche** du profil — plus de défaut
+  France implicite. Rechercher web/YouTube dans la **langue préférée** du
+  profil quand elle diffère du français.
 - S'arrêter selon `rules/stopping-criteria.md` (critère qualitatif, pas quantitatif)
 - Appliquer la **règle de repli** si une source échoue : continuer avec les
   autres sources, logger l'échec dans `knowledge/sources-log.md`

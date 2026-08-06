@@ -26,8 +26,11 @@ certains points, confirme-les brièvement au lieu de tout redemander.
 Mets à jour `memory/user-profile.md` et ajoute une ligne à
 `memory/diagnostic-history.md` (colonne "Rapport généré" = `(en attente)`
 pour l'instant). Retiens le résumé condensé du profil (objectif, stack,
-niveau, contrainte principale, tension clé) — c'est ce que tu transmets aux
-agents suivants.
+niveau, langue préférée, marché cible recherche, contrainte principale,
+tension clé) — c'est ce que tu transmets aux agents suivants. À partir de ce
+moment, ta propre communication avec l'utilisateur (annonces, verdicts,
+résumé final) suit la langue préférée du profil — français par défaut si le
+champ est vide.
 
 ## 2. Researcher — vrai subagent Task
 
@@ -36,7 +39,9 @@ Avant de lancer une recherche, vérifie la fraîcheur : lis
 entrée récente (< 2-4 semaines) correspond déjà au même objectif ET à la même
 stack que le profil actuel, tu peux sauter cette étape et le signaler à
 l'utilisateur. Sinon (objectif/stack différents, ou pas de donnée récente),
-invoque le subagent `researcher` avec le profil condensé en entrée.
+invoque le subagent `researcher` avec le profil condensé en entrée — y
+compris le champ **Marché cible recherche**, que le Researcher utilise pour
+piloter `--location`/`--country-indeed` du skill offres d'emploi.
 
 ## 3. Knowledge Builder — vrai subagent Task
 
