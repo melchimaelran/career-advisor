@@ -244,7 +244,7 @@ Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 | skill-job-postings | Script Python job-postings-research (voir 11.2) | 🔴 Difficile | ✅ Fait |
 | agent-researcher | Agent Researcher — orchestre web/HN/skills | 🟡 Moyen | ✅ Fait |
 | agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | 🟡 Moyen | ✅ Fait |
-| agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ⬜ À faire |
+| agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ✅ Fait |
 | agent-strategist | Agent Strategist — template rapport (voir 11.3) | 🟢 Facile | ⬜ À faire |
 | agent-critic | Agent Critic — checklist (voir 11.5) | 🟢 Facile | ⬜ À faire |
 | agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | 🔴 Difficile | ⬜ À faire |
