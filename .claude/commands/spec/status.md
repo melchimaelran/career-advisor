@@ -8,20 +8,11 @@ description: Show all specifications and their status
 All specs: !`ls -d spec/*/ 2>/dev/null | sort`
 Current spec: !`cat spec/.current-spec 2>/dev/null || echo "None"`
 
-For each spec directory, check:
-!`for dir in spec/*/; do
-    if [ -d "$dir" ]; then
-        echo "=== $dir ==="
-        ls -la "$dir" | grep -E "(requirements|design|tasks)\.md|\..*-approved"
-        if [ -f "$dir/tasks.md" ]; then
-            echo "Task progress:"
-            grep "^- \[" "$dir/tasks.md" | head -5
-            echo "Total tasks: $(grep -c "^- \[" "$dir/tasks.md" 2>/dev/null || echo 0)"
-            echo "Completed: $(grep -c "^- \[x\]" "$dir/tasks.md" 2>/dev/null || echo 0)"
-        fi
-        echo ""
-    fi
-done`
+For each spec directory found above, use the Bash tool to check:
+- `ls -la spec/<dir>/` — lists phase files (.md) and approval markers (.*-approved)
+- `grep "^- \[" spec/<dir>/tasks.md | head -5` — task preview (if tasks.md exists)
+- `grep -c "^- \["  spec/<dir>/tasks.md` — total tasks count
+- `grep -c "^- \[x\]" spec/<dir>/tasks.md` — completed tasks count
 
 ## Your Task
 

@@ -13,7 +13,7 @@ argument-hint: <spec-id>
 Switch the active specification to: $ARGUMENTS
 
 1. Verify the spec directory exists
-2. Update spec/.current-spec with the new spec directory name ([ID]-$ARGUMENTS)
+2. Update `spec/.current-spec` with the new spec directory name ([ID]-$ARGUMENTS)
 3. Show the status of the newly active spec
 4. Display next recommended action
 
