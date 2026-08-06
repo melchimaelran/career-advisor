@@ -49,6 +49,13 @@ d'emploi) qui ne doit jamais polluer le contexte des agents suivants.
 
 Définitions détaillées de chaque agent : `agents/<nom>.md`.
 
+**Exception — Interviewer** : tourne en **main thread direct**, pas comme
+Task subagent. Raison : `AskUserQuestion` est systématiquement indisponible
+dans les subagents Claude Code (limitation plateforme, confirmée en
+conditions réelles), sans mécanisme de dialogue multi-tours alternatif. Son
+contrat (`agents/interviewer.md` : 4 phases, sorties attendues) reste
+inchangé — seul le mécanisme d'invocation diffère des 5 autres agents.
+
 ## Workflow d'exécution
 
 ```
