@@ -241,7 +241,7 @@ Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 |-------|---------|-----------|--------|
 | Fondations | Structure projet, CLAUDE.md, dossiers knowledge/memory/rules/, READMEs agents/skills | 🟢 Facile | ✅ Fait |
 | skill-youtube | Script Python youtube-research (voir 11.1) | 🟡 Moyen | ✅ Fait |
-| skill-job-postings | Script Python job-postings-research (voir 11.2) | 🔴 Difficile | ⬜ À faire |
+| skill-job-postings | Script Python job-postings-research (voir 11.2) | 🔴 Difficile | ✅ Fait |
 | agent-researcher | Agent Researcher — orchestre web/HN/skills | 🟡 Moyen | ⬜ À faire |
 | agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | 🟡 Moyen | ⬜ À faire |
 | agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ⬜ À faire |
