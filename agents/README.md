@@ -1,7 +1,6 @@
 # agents/
 
-Un fichier par agent (subagent Claude Code), créé au fur et à mesure via les specs
-correspondantes (voir PRD.md section 13 — specs 004 à 009).
+Un fichier par agent (subagent Claude Code). Chaque agent tourne dans un contexte
+isolé (Task tool) — seuls les résumés condensés remontent à l'Orchestrator.
 
-Agents prévus : orchestrator, researcher, knowledge-builder, interviewer,
-strategist, critic.
+Agents : orchestrator, researcher, knowledge-builder, interviewer, strategist, critic.

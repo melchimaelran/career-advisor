@@ -15,6 +15,10 @@ Claude répond **toujours en français** dans ce projet — conversations, expli
 questions de clarification, résumés. Seuls les blocs de code et les commandes
 shell restent en anglais.
 
+## Règles Git
+
+- **Ne jamais committer directement sur `main`**. Toujours créer une branche, puis PR.
+
 ## Contraintes globales — ne jamais dévier
 
 - Usage strictement personnel. Pas d'adaptation multi-domaine pour l'instant.
@@ -103,15 +107,6 @@ Un rapport Markdown dans `outputs/`, structuré ainsi (template complet :
 
 ## Méthode d'implémentation
 
-Ce projet est construit avec un workflow **Spec-Driven Development** : commandes
-`/spec:*` dans `.claude/commands/spec/`, reprises **sans modification** de
-https://github.com/papaoloba/spec-based-claude-code.
-
-- Spec active : voir `spec/.current-spec`
-- Roadmap complète des specs : `PRD.md`, section "Roadmap d'implémentation"
-- Pour reprendre le travail à tout moment : lancer `/spec:status`
-
-Une tâche n'est cochée `[x]` dans `tasks.md` que si : le code fonctionne, a été
-testé manuellement (exécution réelle, pas supposée), et produit une sortie conforme
-aux critères d'acceptation de la spec. Si le test échoue : corriger, retester,
-reboucler jusqu'à validation — ne jamais cocher une tâche "probablement" bonne.
+Implémentation par étapes, via Plan mode Claude Code. Roadmap complète : `PRD.md`
+section "Roadmap d'implémentation". Pour reprendre le travail : lire `PRD.md` pour
+identifier l'étape en cours, puis utiliser `/plan` pour planifier la prochaine.

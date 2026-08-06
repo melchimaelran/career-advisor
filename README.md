@@ -5,23 +5,21 @@ Contexte chargé automatiquement par Claude Code à chaque session : CLAUDE.md.
 
 ## Pour reprendre le travail
 
-Ouvrir ce dossier dans Claude Code, puis lancer :
+Ouvrir ce dossier dans Claude Code, lire `PRD.md` section 12 (Roadmap) pour
+identifier l'étape en cours, puis demander à Claude de planifier la prochaine étape.
 
-    /spec:status
+## Architecture
 
-Ça affiche où en est chaque spec (voir la roadmap dans PRD.md, section 13) et la
-prochaine action recommandée.
+6 agents Claude Code (contexte isolé via Task) : Orchestrator → Interviewer →
+Researcher → Knowledge Builder → Strategist → Critic. Détails : `agents/<nom>.md`.
 
-## Démarrer la première spec
+## Structure
 
-    /spec:new fondations
-
-Puis suivre le cycle habituel : /spec:requirements → /spec:approve requirements
-→ /spec:design → /spec:approve design → /spec:tasks → /spec:approve tasks
-→ /spec:implement
-
-## Méthode
-
-Ce projet suit un workflow Spec-Driven Development, repris sans modification de
-https://github.com/papaoloba/spec-based-claude-code (commandes dans
-.claude/commands/spec/).
+```
+agents/     définitions des 6 agents
+skills/     scripts Python réutilisables (youtube-research, job-postings-research, action-plan-builder)
+knowledge/  connaissance marché persistante (alimentée par Researcher + Knowledge Builder)
+memory/     profil utilisateur + historique (alimentés par Interviewer)
+rules/      règles opérationnelles référencées par les agents
+outputs/    rapports finaux générés (report-YYYY-MM-DD.md)
+```

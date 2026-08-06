@@ -43,7 +43,6 @@ agents s'exécutent en contexte isolé (subagent Task) et ne se "voient" pas.
 ## Fichiers lus
 
 - `memory/user-profile.md` (pour décider si re-run de l'Interviewer nécessaire)
-- `spec/.current-spec` (contexte de la session)
 
 ## Fichiers écrits
 
