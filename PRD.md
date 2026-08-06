@@ -243,7 +243,7 @@ Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 | skill-youtube | Script Python youtube-research (voir 11.1) | 🟡 Moyen | ✅ Fait |
 | skill-job-postings | Script Python job-postings-research (voir 11.2) | 🔴 Difficile | ✅ Fait |
 | agent-researcher | Agent Researcher — orchestre web/HN/skills | 🟡 Moyen | ✅ Fait |
-| agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | 🟡 Moyen | ⬜ À faire |
+| agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | 🟡 Moyen | ✅ Fait |
 | agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ⬜ À faire |
 | agent-strategist | Agent Strategist — template rapport (voir 11.3) | 🟢 Facile | ⬜ À faire |
 | agent-critic | Agent Critic — checklist (voir 11.5) | 🟢 Facile | ⬜ À faire |
