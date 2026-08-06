@@ -8,13 +8,24 @@ Gratuit, local, pas de clé API requise.
 Rechercher des vidéos YouTube par mot-clé et en extraire les transcripts pour
 alimenter le Researcher en contenu vidéo francophone/anglophone sur le marché tech.
 
-## Dépendances
+## Installation
 
 ```bash
-pip install yt-dlp youtube-transcript-api
+cd skills/youtube-research
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
 ```
 
 Pas de clé API. Pas de compte YouTube. Exécution 100% locale.
+
+## Invocation
+
+```bash
+# Depuis la racine du projet
+.venv/bin/python skills/youtube-research/youtube_research.py --query "..." --max-results 5
+# ou depuis skills/youtube-research/
+.venv/bin/python youtube_research.py --query "..."
+```
 
 ## Inputs
 
