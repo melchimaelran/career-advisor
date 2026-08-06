@@ -1,2 +1,5 @@
 memory/
 knowledge/raw/
+**/.venv/
+__pycache__/
+*.pyc
