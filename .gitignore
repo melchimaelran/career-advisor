@@ -1,5 +1,10 @@
 memory/
 knowledge/raw/
+knowledge/market-trends.md
+knowledge/job-postings-analysis.md
+knowledge/sources-log.md
+outputs/*.md
+!outputs/README.md
 **/.venv/
 __pycache__/
 *.pyc
