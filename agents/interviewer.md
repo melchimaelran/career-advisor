@@ -29,6 +29,8 @@ L'Interviewer ouvre le run. Sa sortie sert de cible à la recherche du Researche
   Objectif : [type de poste]
   Stack : [liste]
   Niveau : [Junior/Confirmé/Senior]
+  Langue : [langue préférée — gouverne conversation/recherche/rapport]
+  Marché cible recherche : [ville/région/pays pour la recherche d'offres]
   Contrainte principale : [1 phrase]
   Tension clé identifiée : [1 phrase ou "aucune"]
   ```
@@ -48,6 +50,12 @@ L'Interviewer ouvre le run. Sa sortie sert de cible à la recherche du Researche
 ### Phase 1 — Faits rapides (fermé, factuel)
 Métier actuel, niveau, années d'expérience, stack principale, type de contrat
 actuel, secteur.
+
+- **Langue préférée** : langue de la conversation, de la recherche marché et
+  du rapport final. Français par défaut si non précisé.
+- **Marché cible recherche** : ville/région/pays où chercher des offres
+  d'emploi — distinct du lieu de vie actuel (`Localisation`), peut différer si
+  l'utilisateur vise du remote international.
 
 ### Phase 2 — Objectifs déclarés
 CDI / Freelance / Remote international / Création de produit / Consulting.

@@ -10,6 +10,10 @@ modèle, non relu par le Critic — pas soumis à la règle de traçabilité).
 Définir la structure obligatoire du rapport `outputs/report-YYYY-MM-DD.md`.
 Toute section manquante ou action sans critère de "fait" = rapport incomplet.
 
+Structure ci-dessous en français = référence par défaut. Si `Langue préférée`
+du profil ≠ français, le Strategist traduit les titres de section dans cette
+langue en gardant structure et ordre identiques.
+
 ## Structure obligatoire du rapport
 
 ```markdown

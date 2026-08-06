@@ -90,17 +90,23 @@ skills/youtube-research/.venv/bin/python skills/youtube-research/youtube_researc
   --query "mot-clé pertinent pour le profil" --max-results 4
 
 skills/job-postings-research/.venv/bin/python skills/job-postings-research/job_postings_research.py \
-  --search-term "intitulé de poste" --location "..." \
+  --search-term "intitulé de poste" --location "..." --country-indeed "..." \
   --objective "objectif visé du profil" --stack "techno1,techno2,..."
 ```
+
+`--location` et `--country-indeed` se dérivent du champ **Marché cible
+recherche** du profil (jamais laissés au défaut du script — plus de France
+implicite). Recherche web/YouTube dans la **langue préférée** du profil quand
+elle diffère du français.
 
 Ces deux skills gèrent déjà eux-mêmes leur cache de fraîcheur et leur logging
 dans `sources-log.md` — ne duplique pas ce logging.
 
 ## Entrée que tu reçois
 
-Le profil utilisateur condensé (objectif visé, stack, niveau, contraintes
-clés) est fourni dans le prompt de ta tâche. Avant de rechercher, vérifie la
+Le profil utilisateur condensé (objectif visé, stack, niveau, langue
+préférée, marché cible recherche, contraintes clés) est fourni dans le prompt
+de ta tâche. Avant de rechercher, vérifie la
 fraîcheur des données existantes : lis `knowledge/market-trends.md` et
 `knowledge/job-postings-analysis.md` — si une entrée récente (< 2-4 semaines)
 correspond déjà au même objectif/stack, tu peux réutiliser cette donnée au

@@ -41,10 +41,10 @@ Pas de clé API. Pas de compte connecté. Exécution 100% locale.
 | Paramètre | Type | Description |
 |-----------|------|-------------|
 | `--search-term` | string | Intitulé du poste (ex: "développeur backend Python") — requis |
-| `--location` | string | Localisation (ex: "Paris" ou "Remote") |
+| `--location` | string | Localisation (ex: "Paris" ou "Remote") — normalement dérivée par le Researcher du champ `Marché cible recherche` du profil, pas laissée au défaut |
 | `--results-wanted` | int | Nombre d'offres cibles (défaut : 50) |
 | `--site-names` | liste (virgules) | Plateformes (défaut : `indeed,linkedin`) |
-| `--country-indeed` | string | Pays pour le scraping Indeed (défaut : `france` — Indeed géolocalise par domaine pays, sans ça une recherche "Paris" tape le domaine US et ne renvoie rien) |
+| `--country-indeed` | string | Pays pour le scraping Indeed (défaut : `france`, simple filet de sécurité — Indeed géolocalise par domaine pays, sans ça une recherche "Paris" tape le domaine US et ne renvoie rien ; le Researcher le dérive du `Marché cible recherche` du profil) |
 | `--objective` | string | Label "Objectif visé" du batch (ex: "CDI Backend") |
 | `--stack` | liste (virgules) | Mots-clés stack (ex: "Python,Django,Docker") — sert à la fois de label "Stack cible" et de base pour compter les compétences les plus demandées |
 | `--cache-max-age-days` | int | Âge max du cache avant re-scraping (défaut : 28, cohérent avec la règle de fraîcheur de `CLAUDE.md`) |
