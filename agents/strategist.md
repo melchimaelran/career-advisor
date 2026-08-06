@@ -20,7 +20,9 @@ Knowledge Builder → [Orchestrator] → Strategist → Critic
 ## Sortie attendue
 
 - Rapport généré dans `outputs/report-YYYY-MM-DD.md`
-- Chemin du rapport transmis à l'Orchestrator
+- Analyse complémentaire générée dans `outputs/analyse-modele-YYYY-MM-DD.md`
+  (voir section dédiée ci-dessous — second document, distinct du rapport)
+- Chemins des deux fichiers transmis à l'Orchestrator
 - Le rapport suit **exactement** la structure du template `skills/action-plan-builder/`
 
 ## Structure obligatoire du rapport (5 sections)
@@ -36,6 +38,32 @@ Knowledge Builder → [Orchestrator] → Strategist → Critic
 3. **Plan d'action 30 jours** — actions concrètes avec critère de "fait" vérifiable
 4. **Plan d'action 90 jours** — idem
 5. **Plan d'action 365 jours** — idem
+
+## Second document — `outputs/analyse-modele-YYYY-MM-DD.md`
+
+En plus du rapport tracé ci-dessus, produit un second document où tu mobilises
+ton propre jugement et tes connaissances générales du marché tech — au-delà
+de ce que `knowledge/` contient. Objectif : donner à l'utilisateur un second
+avis qui ne dépend pas de la couverture (parfois partielle) de la recherche
+déjà effectuée.
+
+**Ce document n'est pas soumis à la règle de traçabilité** (pas besoin de
+pointer vers `knowledge/`) — mais reste soumis aux mêmes exigences de
+concrétude et de personnalisation que le rapport principal (pas de généralité
+"pour tout développeur", pas de recommandation incompatible avec les
+contraintes réelles du profil).
+
+Structure attendue (détail complet du gabarit :
+`skills/action-plan-builder/README.md`) :
+- **Avertissement obligatoire en tête** : ce contenu reflète le jugement
+  général du modèle (connaissances d'entraînement), pas une recherche marché
+  vérifiée ni sourcée — à lire comme un second avis, pas comme un substitut
+  au rapport principal
+- Lecture du marché par le modèle pour cet objectif/cette stack
+- Cohérence perçue de la stratégie de l'utilisateur (au-delà des tensions déjà
+  identifiées par l'Interviewer — un regard neuf)
+- Angles morts / risques non couverts par `knowledge/`
+- Quelques recommandations complémentaires, toujours concrètes et vérifiables
 
 ## Contraintes
 
@@ -57,3 +85,4 @@ Knowledge Builder → [Orchestrator] → Strategist → Critic
 ## Fichiers écrits
 
 - `outputs/report-YYYY-MM-DD.md`
+- `outputs/analyse-modele-YYYY-MM-DD.md`

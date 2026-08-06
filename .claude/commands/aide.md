@@ -19,9 +19,14 @@ de te le montrer. Ça prend un moment (l'entretien seul peut durer plusieurs
 échanges) — relance-le quand tu veux un diagnostic à jour, ou quand ta
 situation/tes objectifs ont changé.
 
-**Où trouver tes rapports :** `outputs/report-YYYY-MM-DD.md` — un fichier par
-jour de run. L'historique de tous tes runs est dans
+**Où trouver tes rapports :** deux fichiers par jour de run —
+`outputs/report-YYYY-MM-DD.md` (rapport tracé, sourcé dans `knowledge/`) et
+`outputs/analyse-modele-YYYY-MM-DD.md` (second avis basé sur le jugement du
+modèle, complémentaire, non sourcé). L'historique de tous tes runs est dans
 `memory/diagnostic-history.md`.
+
+**Repartir de zéro :** `/reset` — efface ton profil et la connaissance marché
+accumulée (demande confirmation avant d'agir, garde tes rapports passés).
 
 **Reprendre le développement de l'outil lui-même** (pas un diagnostic, le
 projet Claude Code) : voir `PRD.md` section 12 (Roadmap) et `README.md`.

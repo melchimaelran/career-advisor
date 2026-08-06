@@ -1,6 +1,9 @@
 # Skill : action-plan-builder
 
-Template du rapport final produit par le Strategist et relu par le Critic.
+Templates des deux documents produits par le Strategist :
+`outputs/report-YYYY-MM-DD.md` (rapport tracé, relu par le Critic) et
+`outputs/analyse-modele-YYYY-MM-DD.md` (second avis basé sur le jugement du
+modèle, non relu par le Critic — pas soumis à la règle de traçabilité).
 
 ## Objectif
 
@@ -92,6 +95,9 @@ Toute section manquante ou action sans critère de "fait" = rapport incomplet.
 
 ## Règles du Critic (critères de validation)
 
+Ces critères s'appliquent uniquement à `outputs/report-YYYY-MM-DD.md` — le
+Critic ne relit pas `outputs/analyse-modele-YYYY-MM-DD.md` (voir plus bas).
+
 1. **Concrétude** : chaque action a un critère de "fait" vérifiable
    - KO : "Améliorer ses compétences en React"
    - OK : "Terminer le projet X avec React, le déployer sur Vercel"
@@ -101,3 +107,45 @@ Toute section manquante ou action sans critère de "fait" = rapport incomplet.
 
 3. **Traçabilité** : toute affirmation factuelle pointe vers une source dans
    `knowledge/` — pas d'assertion sans origine
+
+## Structure obligatoire de `outputs/analyse-modele-YYYY-MM-DD.md`
+
+Plus léger que le rapport principal — pas de contrainte de traçabilité, mais
+toujours de la concrétude et de la personnalisation (voir
+`agents/strategist.md`, section "Second document").
+
+```markdown
+# Analyse — perspective du modèle — YYYY-MM-DD
+
+> **Avertissement :** ce document reflète le jugement général du modèle
+> (connaissances d'entraînement), pas une recherche marché vérifiée ni
+> sourcée dans `knowledge/`. À lire comme un second avis complémentaire —
+> pas un substitut à `outputs/report-YYYY-MM-DD.md`, qui reste la référence
+> tracée.
+
+**Profil :** [Métier] — [Niveau] — [Stack principale]
+**Objectif visé :** [type de poste]
+**Généré le :** YYYY-MM-DD
+
+---
+
+## Lecture du marché par le modèle
+
+[Ce que le modèle sait du segment visé — tendances générales, demande,
+rémunération indicative — en précisant le niveau de confiance/actualité]
+
+## Cohérence perçue de la stratégie
+
+[Regard neuf sur la stratégie déclarée par l'utilisateur, au-delà des
+tensions déjà identifiées par l'Interviewer]
+
+## Angles morts / risques non couverts par knowledge/
+
+- ...
+
+## Recommandations complémentaires
+
+| Recommandation | Critère de "fait" | Priorité |
+|-----------------|-------------------|----------|
+| [Action concrète] | [Comment savoir que c'est fait ?] | P0/P1/P2 |
+```
