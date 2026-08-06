@@ -247,5 +247,5 @@ Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 | agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ✅ Fait |
 | agent-strategist | Agent Strategist — template rapport (voir 11.3) | 🟢 Facile | ✅ Fait |
 | agent-critic | Agent Critic — checklist (voir 11.5) | 🟢 Facile | ✅ Fait |
-| agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | 🔴 Difficile | ⬜ À faire |
+| agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | 🔴 Difficile | ✅ Fait |
 | e2e-test | Test end-to-end complet du workflow | 🟡 Moyen | ⬜ À faire |

@@ -49,12 +49,22 @@ d'emploi) qui ne doit jamais polluer le contexte des agents suivants.
 
 Définitions détaillées de chaque agent : `agents/<nom>.md`.
 
-**Exception — Interviewer** : tourne en **main thread direct**, pas comme
-Task subagent. Raison : `AskUserQuestion` est systématiquement indisponible
-dans les subagents Claude Code (limitation plateforme, confirmée en
-conditions réelles), sans mécanisme de dialogue multi-tours alternatif. Son
-contrat (`agents/interviewer.md` : 4 phases, sorties attendues) reste
-inchangé — seul le mécanisme d'invocation diffère des 5 autres agents.
+**Exception — Interviewer et Orchestrator** : tournent en **main thread
+direct**, pas comme Task subagent. Raison : `AskUserQuestion` est
+systématiquement indisponible dans les subagents Claude Code (limitation
+plateforme, confirmée en conditions réelles), sans mécanisme de dialogue
+multi-tours alternatif — et l'Orchestrator doit exécuter la phase Interviewer
+lui-même, donc hérite de la même contrainte. Leurs contrats
+(`agents/interviewer.md`, `agents/orchestrator.md`) restent inchangés — seul
+le mécanisme d'invocation diffère des 4 autres agents (Researcher, Knowledge
+Builder, Strategist, Critic — de vrais subagents Task, invocables entre eux
+sans restriction jusqu'à 3 niveaux de profondeur).
+
+En pratique, l'Orchestrator est implémenté comme une **commande slash projet**
+(`.claude/commands/diagnostic.md`), pas un fichier `.claude/agents/` — une
+commande slash s'exécute par défaut dans le main thread (accès complet à
+`AskUserQuestion` et à `Agent`/`Task` pour invoquer les 4 autres agents),
+contrairement à un subagent Task qui n'a jamais accès à `AskUserQuestion`.
 
 ## Workflow d'exécution
 

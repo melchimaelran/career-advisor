@@ -3,7 +3,20 @@
 Outil personnel basé sur Claude Code. Vision complète et décisions : PRD.md.
 Contexte chargé automatiquement par Claude Code à chaque session : CLAUDE.md.
 
-## Pour reprendre le travail
+## Utiliser l'outil
+
+Ouvrir ce dossier dans Claude Code, puis :
+
+- **`/diagnostic`** — lance un run complet (entretien → recherche marché →
+  consolidation → rapport de diagnostic + plan d'action 30/90/365 jours →
+  relecture qualité). Déclenchement manuel uniquement, pas de cron — relance
+  quand tu veux un diagnostic à jour ou que ta situation a changé.
+- **`/aide`** — pense-bête rapide si tu reviens sans contexte.
+
+Rapports générés dans `outputs/report-YYYY-MM-DD.md`, historique des runs
+dans `memory/diagnostic-history.md`.
+
+## Pour reprendre le développement de l'outil lui-même
 
 Ouvrir ce dossier dans Claude Code, lire `PRD.md` section 12 (Roadmap) pour
 identifier l'étape en cours, puis demander à Claude de planifier la prochaine étape.
