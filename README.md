@@ -12,9 +12,13 @@ Ouvrir ce dossier dans Claude Code, puis :
   relecture qualité). Déclenchement manuel uniquement, pas de cron — relance
   quand tu veux un diagnostic à jour ou que ta situation a changé.
 - **`/aide`** — pense-bête rapide si tu reviens sans contexte.
+- **`/reset`** — efface profil + connaissance marché pour repartir de zéro
+  (demande confirmation, garde les rapports passés dans `outputs/`).
 
-Rapports générés dans `outputs/report-YYYY-MM-DD.md`, historique des runs
-dans `memory/diagnostic-history.md`.
+Chaque run produit deux fichiers : `outputs/report-YYYY-MM-DD.md` (rapport
+tracé, sources dans `knowledge/`) et `outputs/analyse-modele-YYYY-MM-DD.md`
+(second avis basé sur le jugement du modèle, complémentaire, non sourcé).
+Historique des runs dans `memory/diagnostic-history.md`.
 
 ## Pour reprendre le développement de l'outil lui-même
 

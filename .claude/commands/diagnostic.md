@@ -48,32 +48,42 @@ structurée avant de continuer.
 
 Invoque le subagent `strategist`. **Rappel important** : ce subagent ne peut
 pas écrire de fichier lui-même (contrainte plateforme — `Write` est bloqué
-pour les fichiers de type rapport livrable). Il te retourne le contenu
-complet du rapport en texte, dans un bloc de code Markdown, précédé du résumé
-structuré. C'est toi qui écris ce contenu tel quel dans
-`outputs/report-YYYY-MM-DD.md` (date du jour ; écrase le rapport du jour s'il
-existe déjà, ne touche jamais aux rapports des jours précédents).
+pour les fichiers de type rapport livrable). Il te retourne **deux** contenus
+complets en texte, chacun dans son propre bloc de code Markdown, précédés du
+résumé structuré :
+1. Le rapport tracé → tu l'écris tel quel dans `outputs/report-YYYY-MM-DD.md`
+2. L'analyse basée sur son propre jugement → tu l'écris tel quel dans
+   `outputs/analyse-modele-YYYY-MM-DD.md`
+
+(Date du jour pour les deux ; écrase les fichiers du jour s'ils existent déjà,
+ne touche jamais aux fichiers des jours précédents.)
 
 ## 5. Critic — vrai subagent Task
 
-Invoque le subagent `critic` sur le rapport que tu viens d'écrire (indique-lui
-le chemin exact du fichier, et précise "premier passage").
+Invoque le subagent `critic` sur `outputs/report-YYYY-MM-DD.md` uniquement
+(indique-lui le chemin exact, et précise "premier passage"). Le Critic ne
+relit **pas** `outputs/analyse-modele-YYYY-MM-DD.md` — pas de critère de
+traçabilité applicable à ce document, donc pas de relecture qualité dessus.
 
 - Si le verdict est `APPROUVÉ` → passe à l'étape 6.
 - Si le verdict est `CORRECTIONS REQUISES` → relance le subagent `strategist`
   une seule fois avec la liste des corrections exactes du Critic en entrée,
-  ré-écris `outputs/report-YYYY-MM-DD.md` avec le nouveau contenu, puis
-  relance le subagent `critic` en précisant cette fois "second passage,
-  rends un verdict final". N'itère pas au-delà de ce second passage, quel
-  que soit le verdict (contrat : 1 cycle de correction maximum).
+  ré-écris `outputs/report-YYYY-MM-DD.md` avec le nouveau contenu (l'analyse
+  modèle déjà écrite à l'étape 4 n'a pas besoin d'être régénérée — les
+  corrections du Critic ne portent que sur le rapport tracé), puis relance le
+  subagent `critic` en précisant cette fois "second passage, rends un verdict
+  final". N'itère pas au-delà de ce second passage, quel que soit le verdict
+  (contrat : 1 cycle de correction maximum).
 
 ## 6. Sortie finale à l'utilisateur
 
 Affiche, dans l'ordre :
-- Le chemin du rapport : `outputs/report-YYYY-MM-DD.md`
-- Le verdict final du Critic (approuvé, ou corrigé une fois puis verdict final)
-- Un résumé en 3-5 lignes du diagnostic (pas le rapport entier — l'utilisateur
-  peut ouvrir le fichier)
+- Les chemins des deux documents : `outputs/report-YYYY-MM-DD.md` et
+  `outputs/analyse-modele-YYYY-MM-DD.md`
+- Le verdict final du Critic sur le rapport (approuvé, ou corrigé une fois
+  puis verdict final)
+- Un résumé en 3-5 lignes du diagnostic (pas le contenu entier — l'utilisateur
+  peut ouvrir les fichiers)
 - Si le Critic a signalé un point d'attention hors des 3 critères (ex:
   couverture `knowledge/` insuffisante) : le mentionner explicitement, avec
   la recommandation associée (ex: relancer un `/diagnostic` plus tard une
