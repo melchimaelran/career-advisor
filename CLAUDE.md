@@ -15,6 +15,10 @@ Claude répond **toujours en français** dans ce projet — conversations, expli
 questions de clarification, résumés. Seuls les blocs de code et les commandes
 shell restent en anglais.
 
+## Règles Git
+
+- **Ne jamais committer directement sur `main`**. Toujours créer une branche, puis PR.
+
 ## Contraintes globales — ne jamais dévier
 
 - Usage strictement personnel. Pas d'adaptation multi-domaine pour l'instant.
