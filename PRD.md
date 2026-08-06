@@ -141,12 +141,6 @@ Deux niveaux distincts :
 career-advisor/
 ├── CLAUDE.md
 ├── PRD.md
-├── .claude/
-│   └── commands/
-│       └── spec/              # commandes Spec-Driven Development (papaoloba, inchangées)
-├── spec/
-│   ├── .current-spec
-│   └── NNN-nom-de-la-spec/    # créé au fur et à mesure par /spec:new
 ├── agents/
 │   ├── orchestrator.md
 │   ├── researcher.md
@@ -238,56 +232,20 @@ Avant livraison, vérifie :
   phase 4 de l'Interviewer — pas juste "un bon plan dans l'absolu", un bon plan
   *pour cette personne précise*
 
-## 12. Méthode d'implémentation — Spec-Driven Development
+## 12. Roadmap d'implémentation
 
-Le projet est implémenté avec le workflow décrit dans
-`https://github.com/papaoloba/spec-based-claude-code`, **repris sans modification**.
+Implémentation par étapes en Plan mode. Ordre à respecter : skills avant le
+Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 
-### Pourquoi ce choix
-
-- Répond exactement au besoin exprimé : découpage en stories/specs, implémentation
-  une à une, boucle test-valide-corrige (via le concept de "Definition of Done"),
-  possibilité d'avancer étape par étape, et **reprise à tout moment** — l'état
-  complet vit dans les fichiers (`spec/.current-spec`, `tasks.md` avec cases à
-  cocher), jamais dans la mémoire de conversation, ce qui est indispensable
-  puisque Claude Code n'a pas de mémoire persistante entre deux sessions
-- Alternative envisagée et écartée : BMAD-METHOD, plus lourd, pensé pour des
-  équipes avec plusieurs rôles (Architecte/PM/Développeur) — surdimensionné pour
-  un outil solo
-
-### Commandes disponibles (inchangées)
-
-`/spec:new`, `/spec:requirements`, `/spec:design`, `/spec:tasks`, `/spec:approve`,
-`/spec:implement`, `/spec:status`, `/spec:switch`, `/spec:update-task`, `/spec:review`
-
-### Cycle par spec
-
-```
-/spec:new <nom> → /spec:requirements → /spec:approve requirements
-→ /spec:design → /spec:approve design
-→ /spec:tasks → /spec:approve tasks
-→ /spec:implement → /spec:update-task (au fur et à mesure) → /spec:status
-```
-
-Une tâche n'est cochée `[x]` que si le code fonctionne réellement, testé (pas
-supposé), et conforme aux critères d'acceptation. Si le test échoue : corriger,
-retester, reboucler jusqu'à validation.
-
-## 13. Roadmap d'implémentation — découpage en specs
-
-| # | Spec | Contenu |
-|---|---|---|
-| 001 | `fondations` | Structure du projet, `CLAUDE.md`, dossiers `knowledge/`, `memory/`, `rules/` |
-| 002 | `skill-youtube` | Skill YouTube adapté (voir 11.1) |
-| 003 | `skill-job-postings` | Skill offres d'emploi (voir 11.2) |
-| 004 | `agent-researcher` | Agent Researcher — orchestre web/HN/skills 002-003 |
-| 005 | `agent-interviewer` | Agent Interviewer — flow socratique (voir 11.4) |
-| 006 | `agent-knowledge-builder` | Agent Knowledge Builder |
-| 007 | `agent-strategist` | Agent Strategist — template rapport (voir 11.3) |
-| 008 | `agent-critic` | Agent Critic — checklist (voir 11.5) |
-| 009 | `agent-orchestrator` | Agent Orchestrator — assemble tout, gère les subagents |
-| 010 | `e2e-test` | Test end-to-end complet du workflow |
-
-Ordre recommandé : respecter la numérotation (les skills avant le Researcher qui
-les utilise, tous les agents avant l'Orchestrator qui les assemble, l'Orchestrator
-avant le test end-to-end).
+| Étape | Contenu | Statut |
+|-------|---------|--------|
+| Fondations | Structure projet, CLAUDE.md, dossiers knowledge/memory/rules/, READMEs agents/skills | ✅ Fait |
+| skill-youtube | Script Python youtube-research (voir 11.1) | ⬜ À faire |
+| skill-job-postings | Script Python job-postings-research (voir 11.2) | ⬜ À faire |
+| agent-researcher | Agent Researcher — orchestre web/HN/skills | ⬜ À faire |
+| agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | ⬜ À faire |
+| agent-knowledge-builder | Agent Knowledge Builder | ⬜ À faire |
+| agent-strategist | Agent Strategist — template rapport (voir 11.3) | ⬜ À faire |
+| agent-critic | Agent Critic — checklist (voir 11.5) | ⬜ À faire |
+| agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | ⬜ À faire |
+| e2e-test | Test end-to-end complet du workflow | ⬜ À faire |
