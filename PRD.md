@@ -237,15 +237,15 @@ Avant livraison, vérifie :
 Implémentation par étapes en Plan mode. Ordre à respecter : skills avant le
 Researcher, agents avant l'Orchestrator, Orchestrator avant le test end-to-end.
 
-| Étape | Contenu | Statut |
-|-------|---------|--------|
-| Fondations | Structure projet, CLAUDE.md, dossiers knowledge/memory/rules/, READMEs agents/skills | ✅ Fait |
-| skill-youtube | Script Python youtube-research (voir 11.1) | ⬜ À faire |
-| skill-job-postings | Script Python job-postings-research (voir 11.2) | ⬜ À faire |
-| agent-researcher | Agent Researcher — orchestre web/HN/skills | ⬜ À faire |
-| agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | ⬜ À faire |
-| agent-knowledge-builder | Agent Knowledge Builder | ⬜ À faire |
-| agent-strategist | Agent Strategist — template rapport (voir 11.3) | ⬜ À faire |
-| agent-critic | Agent Critic — checklist (voir 11.5) | ⬜ À faire |
-| agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | ⬜ À faire |
-| e2e-test | Test end-to-end complet du workflow | ⬜ À faire |
+| Étape | Contenu | Difficulté | Statut |
+|-------|---------|-----------|--------|
+| Fondations | Structure projet, CLAUDE.md, dossiers knowledge/memory/rules/, READMEs agents/skills | 🟢 Facile | ✅ Fait |
+| skill-youtube | Script Python youtube-research (voir 11.1) | 🟡 Moyen | ✅ Fait |
+| skill-job-postings | Script Python job-postings-research (voir 11.2) | 🔴 Difficile | ⬜ À faire |
+| agent-researcher | Agent Researcher — orchestre web/HN/skills | 🟡 Moyen | ⬜ À faire |
+| agent-interviewer | Agent Interviewer — flow socratique (voir 11.4) | 🟡 Moyen | ⬜ À faire |
+| agent-knowledge-builder | Agent Knowledge Builder | 🟢 Facile | ⬜ À faire |
+| agent-strategist | Agent Strategist — template rapport (voir 11.3) | 🟢 Facile | ⬜ À faire |
+| agent-critic | Agent Critic — checklist (voir 11.5) | 🟢 Facile | ⬜ À faire |
+| agent-orchestrator | Agent Orchestrator — assemble tout, gère les subagents | 🔴 Difficile | ⬜ À faire |
+| e2e-test | Test end-to-end complet du workflow | 🟡 Moyen | ⬜ À faire |
