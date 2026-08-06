@@ -9,6 +9,12 @@ concret sur 30/90/365 jours.
 
 Vision complète, décisions et justifications : voir `PRD.md`.
 
+## Langue de communication
+
+Claude répond **toujours en français** dans ce projet — conversations, explications,
+questions de clarification, résumés. Seuls les blocs de code et les commandes
+shell restent en anglais.
+
 ## Contraintes globales — ne jamais dévier
 
 - Usage strictement personnel. Pas d'adaptation multi-domaine pour l'instant.
