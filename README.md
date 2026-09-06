@@ -3,6 +3,11 @@
 Outil personnel basé sur Claude Code. Vision complète et décisions : PRD.md.
 Contexte chargé automatiquement par Claude Code à chaque session : CLAUDE.md.
 
+Partagé en public comme référence d'architecture (6 agents Claude Code + skills
+Python). Les données produites à l'usage — `memory/`, `knowledge/`, `outputs/*.md`
+— sont gitignorées : un clone démarre vide, sans profil ni rapport. Lancer
+`/diagnostic` pour tout générer localement.
+
 ## Utiliser l'outil
 
 Ouvrir ce dossier dans Claude Code, puis :
